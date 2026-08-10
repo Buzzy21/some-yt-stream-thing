@@ -14,17 +14,17 @@ def main():
     timeToTotalView = data["timeToTotalView"]
 
     # plotter.plotFreq(total_msg)
-    # plotter.plotStuff([timeToActiveView,timeToTotalView],["timeToActiveView","timeToTotalView"])
+    plotter.plotStuff([timeToActiveView],["timeToActiveView"])
 
-    target_cnt = {}
-    target = "goon"
+    # target_cnt = {}
+    # target = "goon"
 
-    for name,msgs in total_msg.items():
-        for msg in msgs:
-            if target in msg:
-                target_cnt.setdefault(name,0)
-                target_cnt[name]+=1
+    # for name,msgs in total_msg.items():
+    #     for msg in msgs:
+    #         if target in msg:
+    #             target_cnt.setdefault(name,0)
+    #             target_cnt[name]+=1
 
-    plotter.plotFreq2(target_cnt)
+    # plotter.plotFreq2(target_cnt)
 
 main()
