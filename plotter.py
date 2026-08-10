@@ -38,3 +38,21 @@ def plotFreq(freqDict):
     plt.grid(axis="y",linestyle="--",alpha=0.7)
     plt.tight_layout()
     plt.show()
+
+def plotFreq2(freqDict): # this one assumes dict already comes in int
+    names = list(freqDict.keys())
+    freq = list(freqDict.values())
+
+    bars = plt.bar(names,freq,color="skyblue",edgecolor="black")
+
+    plt.xlabel("Names")
+    plt.ylabel("Count")
+   
+    plt.xticks(rotation=45,ha="right")
+
+    for bar in bars:
+       plt.text(bar.get_x()+bar.get_width()/2,bar.get_height()+0.1,int(bar.get_height()),ha="center",va="bottom")
+
+    plt.grid(axis="y",linestyle="--",alpha=0.7)
+    plt.tight_layout()
+    plt.show()
